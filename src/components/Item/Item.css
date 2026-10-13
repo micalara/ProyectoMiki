@@ -1,57 +1,97 @@
+
 .card {
   width: 20rem;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
-
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
+  background: linear-gradient(180deg, #fff5fa, #fff0f6);
+  border: 1px solid #f1c1d8;
+  border-radius: 20px;
   overflow: hidden;
-
-  transition: 0.25s;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  box-shadow: 0 6px 16px rgba(178, 26, 100, 0.08);
 }
 
 .card:hover {
   transform: translateY(-4px);
-  border-color: var(--primary);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+  border-color: #C95984;
+  box-shadow: 0 10px 22px rgba(178, 26, 100, 0.16);
 }
 
 .card img {
   width: 100%;
   height: 18rem;
-  object-fit: cover;
+  object-fit: contain;
+  background: #ffffff;
+  padding: 12px;
 }
 
 .card h3 {
   padding: 1rem 1rem 0.4rem;
-  font-size: 1.35rem;
-  color: var(--text);
+  margin: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #b21a64;
 }
 
 .card p:first-of-type {
   padding: 0 1rem;
-  color: var(--text-secondary);
+  margin: 0;
+  color: #5a4a4a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
   line-height: 1.5;
   flex: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .card p:last-of-type {
   padding: 1rem;
-  font-size: 1.35rem;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text);
+  color: #C95984;
 }
 
 .card button {
   margin: 0 1rem 1rem;
+  padding: 0.75rem 1.2rem;
+  background: linear-gradient(135deg, #ff8cc2, #C95984);
+  color: #ffffff;
+  border: none;
+  border-radius: 2rem;
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.card p:first-of-type {
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
+.card button:hover {
+  background: linear-gradient(135deg, #ff6fa8, #b21a64);
+  transform: translateY(-2px);
+}
+
+.card button:disabled {
+  background: #e7cbd7;
+  color: #8a7f7f;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+
+  .card img {
+    height: 15rem;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+  }
 }

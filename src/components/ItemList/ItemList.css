@@ -1,8 +1,25 @@
+
 .products-container {
   margin: 2rem 0;
+  padding: 0 1rem;
   display: flex;
   justify-content: center;
-
   flex-wrap: wrap;
   gap: 2rem;
+}
+
+.products-container > a {
+  display: flex;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .products-container {
+    gap: 1.5rem;
+  }
+
+  .products-container > a {
+    width: 100%;
+    justify-content: center;
+  }
 }

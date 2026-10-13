@@ -1,27 +1,26 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Montserrat+Alternates:wght@500;600;700&display=swap');
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
-:root {
-  --bg: #384152;
-  --surface: #465166;
-  --card: #546178;
-  --border: #68758f;
-  --text: #f4f4f4;
-  --text-secondary: #d7dce3;
-  --disabled: #8d97ab;
-
-  --primary: #f4a261;
-  --primary-hover: #f6b67a;
-  --success: #52b788;
-  --danger: #e63946;
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
 }
+
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: system-ui, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff7fa;
+  color: #222222;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
 }
 
 #root {
@@ -32,22 +31,11 @@ body {
 
 main {
   flex: 1;
-  width: min(1200px, 90%);
-  margin: 2rem auto;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-ul {
-  list-style: none;
+p,
+span {
+  font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -55,59 +43,21 @@ a {
   text-decoration: none;
 }
 
-.primary {
-  color: var(--text);
+ul,
+ol {
+  list-style: none;
 }
 
-.secondary {
-  color: var(--text-secondary);
-}
-
-.disabled {
-  color: var(--disabled);
-}
-
-.bg-primary {
-  background: var(--primary);
-}
-
-.bg-success {
-  background: var(--success);
-}
-
-.bg-delete {
-  background: var(--danger);
-}
-
-.btn {
-  border: none;
-  border-radius: 8px;
-  padding: 0.7rem 1.3rem;
+button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
   cursor: pointer;
-  font: inherit;
-  color: #1f2937;
-  transition: 0.25s;
-}
-.bg-success,
-.bg-delete {
-  color: white;
 }
 
-.bg-primary:hover {
-  background: var(--primary-hover);
-}
-
-.bg-success:hover {
-  filter: brightness(0.9);
-}
-
-.bg-delete:hover {
-  filter: brightness(0.9);
-}
-
+button:disabled,
 .btn:disabled {
-  background: var(--disabled);
-  color: var(--text-secondary);
+  background: #e7cbd7;
+  color: #8a7f7f;
   cursor: not-allowed;
   filter: none;
 }

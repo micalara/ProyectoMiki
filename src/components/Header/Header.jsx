@@ -8,8 +8,7 @@ export const Header = () => {
         <header>
             <div className="logo-container">
                 <Link to={"/"}>
-                    <img src={logo} alt="logo react"/>
-                    <span>Mi-ki</span>
+                    <img src="/img/footware/logomiki.png" alt="logo react"/>
                 </Link>
             </div>
             <Nav />
